@@ -1,6 +1,8 @@
 <div class="login_form">
     <img class="login_image" src="../../assets/Login.svg" alt="Login Logo" height="700px" width="700px">
-    <form action="">
+    <!-- Login Form -->
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <!-- Login Title -->
       <h1 class="animate__animated animate__backInDown">
         <span class="title-word title-word-1">L</span>
         <span class="title-word title-word-2">O</span>
@@ -12,26 +14,45 @@
       <br>
       <br>
       <br>
+      <!-- Email Input -->
       <div class="form-control">
-        <input type="email" required>
+      <input type="email" required id="inputEmail" formControlName="email">
         <label>
-          <span style="transition-delay:0ms">U</span><span style="transition-delay:50ms">s</span><span style="transition-delay:100ms">e</span><span style="transition-delay:150ms">r</span><span style="transition-delay:200ms">n</span><span style="transition-delay:250ms">a</span><span style="transition-delay:300ms">m</span><span style="transition-delay:350ms">e</span>
+        <span style="transition-delay:0ms">Username</span>
         </label>
+        <!-- Email Validation Error Messages -->
+        <div *ngIf="submitted && formControl['email'].errors" class="text-danger">
+            <div *ngIf="formControl['email'].errors['email']">Email must be valid.</div>
+            <div *ngIf="formControl['email'].errors['required']">Email is required.</div>
+          </div>
       </div>
+      <!-- Password Input -->
       <div class="form-control1">
-        <input type="password" required>
+        <input type="password" required id="inputPassword" formControlName="password">
         <label>
-          <span style="transition-delay:0ms">P</span><span style="transition-delay:50ms">a</span><span style="transition-delay:100ms">s</span><span style="transition-delay:150ms">s</span><span style="transition-delay:200ms">w</span><span style="transition-delay:250ms">o</span><span style="transition-delay:300ms">r</span><span style="transition-delay:350ms">d</span>
+        <span style="transition-delay:0ms">Password</span>
         </label>
+        <!-- Password Validation Error Messages -->
+        <div *ngIf="submitted && formControl['password'].errors" class="text-danger">
+          <div *ngIf="formControl['password'].errors['required']">Password is required.</div>
+          <div *ngIf="formControl['password'].errors['pattern']">
+            <ul>
+              <li>Password should be alphanumeric.</li>
+              <li>A letter of the password should be capital.</li>
+              <li>Password must contain a special character (@, $, !, &, etc).</li>
+              <li>Password length must be greater than 7 characters.</li>
+            </ul>
+          </div>
+        </div>
       </div>
       <br>
       <br>
+      <!-- Login Button -->
       <button class="ui-btn" id="button" type="submit">
-        <span>
-          Login
-        </span>
+      <span>Login</span>
       </button>
-
+      <br>
+      <br>
+      <p id="noaccount">Don't have an account? &nbsp;<a id="register">Register Now!</a></p>
     </form>
   </div>
-  

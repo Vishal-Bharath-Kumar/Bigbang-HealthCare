@@ -1,6 +1,6 @@
 .login_form {
     display: flex;
-    margin-left: 80px;
+    margin-left: 40px;
   }
   
   .login_image {
@@ -12,7 +12,7 @@
     font-size: 6.5vw;
     text-transform: uppercase;
     margin-top: 180px;
-    margin-left: 220px;
+    margin-left: 200px;
   }
   
   .title-word {
@@ -85,7 +85,6 @@
     outline: 0;
     border-bottom-color: rgb(71, 71, 71);
   }
-  
   .form-control1 label,
   .form-control label {
     position: absolute;
@@ -99,7 +98,7 @@
     display: inline-block;
     font-size: 18px;
     min-width: 5px;
-    color: #000000;
+    color: #00000000;
     transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
   
@@ -108,7 +107,13 @@
   .form-control1 input:valid+label span,
   .form-control input:valid+label span {
     color: rgb(46, 145, 211);
-    transform: translateY(-30px);
+    transform: translateY(-30px); 
+  }
+   li{
+    text-align: justify;
+    list-style-type: none;
+    width: 280px;
+    margin-left: -40px;
   }
   .ui-btn {
     --btn-default-bg: rgb(46, 145, 211);
@@ -172,6 +177,16 @@
   .ui-btn:hover span::before,
   .ui-btn:focus span::before {
     animation: chitchat linear both var(--btn-animation-duration);
+  }
+  #noaccount{
+    font-size: larger;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 190px;
+  }
+  #register{
+    color: #3D8DAE;
+    font-weight: 600;
+    cursor: pointer;
   }
   
   @keyframes chitchat {
@@ -249,20 +264,67 @@
     }
   }
   
-  .message {
-    padding: 10px;
-    border-radius: 5px;
-    color: #fff;
-    font-size: large;
-    font-weight: 600;
-    margin-top: 10px;
-    margin-left: 10px;
-    transition: background-color 0.3s ease-in-out;
-  }
   
-  .error-message {
+  .text-danger{
     color: red;
-    margin-top: 5px;
   }
   
+    
+  @media only screen and (max-width: 1074px) {
+    body {
+      background-color: #accfcb22;
+    }
+  
+    .login_form {
+      display: block;
+    }
+  
+    .login_image {
+      height: 24px;
+      width: 24px;
+      position: relative;
+      filter: opacity(0);
+    }
+  
+    form {
+      margin-left: -120px;
+    }
+  }
+  @media only screen and (max-width: 820px) {
+    body {
+      background-color: #accfcb22;
+    }
+  
+    .login_form {
+      display: block;
+    }
+  
+    .login_image {
+      position: relative;
+      filter: opacity(0);
+    }
+  
+    form {
+      margin-left: -120px;
+    }
+  }
+  
+  /* Full Responsive View */
+  @media only screen and (max-width: 480px) {
+    body {
+      background-color: #accfcb55;
+    }
+    .login_form {
+      margin-left: 0;
+    }
+  
+    .login_image {
+      height: 16px;
+      width: 16px;
+    }
+  
+    form {
+      margin-left: 0;
+    }
+  }
   
