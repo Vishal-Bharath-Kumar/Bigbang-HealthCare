@@ -187,6 +187,9 @@
     color: #3D8DAE;
     font-weight: 600;
     cursor: pointer;
+    text-decoration: none;
+
+
   }
   
   @keyframes chitchat {

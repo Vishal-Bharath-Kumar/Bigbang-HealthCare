@@ -9,11 +9,11 @@
          <span class="bar"></span>
        </div>
        <ul class="nav no-search">
-         <li class="nav-item"><a href="#">Home</a></li>
-         <li class="nav-item"><a href="#">Specialities</a></li>
+         <li class="nav-item"><a [routerLink]="['/home']">Home</a></li>
+         <li class="nav-item"><a [routerLink]="['/special']">Specialities</a></li>
          <li class="nav-item"><a href="#">Doctors</a></li>
          <li class="nav-item"><a href="#">Appointment  &nbsp;</a></li>
-         <li class="nav-item"><a href="#" id="login">LogIn</a></li>
+         <li class="nav-item"><a [routerLink]="['/login']" id="login">LogIn</a></li>
          <li class="nav-item"><a href="#" id="logout">LogOut</a></li>
        </ul>
      </nav>
@@ -41,9 +41,9 @@
          <p>A more detailed plan, this executive health plus package can help us additionally check for any deficiencies that might lead to serious complications.</p>
        </div>
      </section>
-     <app-specialities></app-specialities>
-     <app-footer></app-footer>
    </div>
+  
+  
    
   
    

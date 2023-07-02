@@ -1,0 +1,97 @@
+.img-1
+{
+   background:linear-gradient(to top,rgba(100, 100, 100, 0.604),rgba(81, 161, 195, 0.1)), url("https://pharmaphorum.com/sites/default/files/styles/x_large/public/2023-06/AI-in-healthcare.jpg?itok=V7k1kI04") no-repeat;
+   background-size: cover;
+   position: relative;
+   width: 400px;
+   height: 400px;
+}
+.img-2
+{
+   background:linear-gradient(to top,rgba(100, 100, 100, 0.604),rgba(81, 161, 195, 0.1)), url("https://thumbs.dreamstime.com/b/healthcare-business-graph-medical-examination-health-insurance-doctor-stethoscope-hand-data-growth-chart-medicine-154742180.jpg") no-repeat;
+   background-size: cover;
+   position: relative;
+   width:1000px;
+   height: 400px;
+}
+.box1{
+   display: flex;
+   align-items: center;
+   justify-content:center;
+}
+.img-3{
+   background:linear-gradient(to top,rgba(100, 100, 100, 0.604),rgba(81, 161, 195, 0.1)), url("https://www.solutelabs.com/static/e370079e7896bfe41ed477571d234eef/c5f06/healthcare-bg-sm.png") no-repeat;
+   background-size: cover;
+   position: relative;
+   width: 1430px;
+   height: 350px;
+}
+.box2{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-top: 30px;
+}
+.text1{
+   font-size: 38px;
+   color: #000000a0;
+   font-family: 'Helvetica';
+   font-weight: 600;
+   padding-top: 45px;
+   padding-left: 20px;
+}
+.text2{
+    font-size: 38px;
+    color: #0000008d;
+   font-weight: 600;
+   padding-top: 45px;
+   padding-left: 10px;
+}
+
+.txtbox1{
+    padding-right: 30px;
+}
+.til{
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Helvetica';
+    color: #2c7bb8;
+  }
+  .images{
+    display: grid;
+    grid-template-columns: auto auto;
+   
+  }
+  .images img{
+    border-radius: 10px;
+    box-shadow: 10px 10px rgba(206, 206, 206, 0.725);
+  }
+  .image-left{
+    display: flex;
+    justify-content: right;
+    padding-right: 20px;
+  
+  }
+  .image-right{
+    width: 86%;
+    display: grid;
+    grid-template-columns: auto auto;
+   
+  }
+  .each-img{
+   
+    padding-bottom: 20px;
+    padding-right: 20px;
+  }
+  .vdo{
+    display: flex;
+    padding-left: 25px;
+    padding-right: 10px;
+    margin-left: 180px;
+    margin-right: 200px;
+}
+#iframe2{
+    padding-left: 20px;
+    padding-right: 20px;
+}

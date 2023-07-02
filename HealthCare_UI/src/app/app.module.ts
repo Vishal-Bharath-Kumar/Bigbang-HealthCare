@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './User/navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { SpecialitiesComponent } from './User/specialities/specialities.component';
+import { SpecialComponent } from './User/special/special.component';
 
 @NgModule({
     declarations: [
@@ -16,7 +17,8 @@ import { SpecialitiesComponent } from './User/specialities/specialities.componen
         LoginComponent,
         NavbarComponent,
         FooterComponent,
-        SpecialitiesComponent
+        SpecialitiesComponent,
+        SpecialComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
