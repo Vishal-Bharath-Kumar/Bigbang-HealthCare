@@ -40,7 +40,7 @@ h5{
   }
   
   .card1 svg {
-    position: absolute;
+    position: relative;
     display: flex;
     width: 60%;
     height: 100%;
@@ -58,7 +58,7 @@ h5{
     align-items: center;
     justify-content: center;
     width: 25%;
-    color: whitesmoke;
+    color: rgb(255, 255, 255);
     font-size: 24px;
     text-decoration: none;
     transition: 0.25s;

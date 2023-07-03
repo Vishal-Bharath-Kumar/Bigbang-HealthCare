@@ -18,12 +18,12 @@
       <div class="form-control">
       <input type="email" required id="inputEmail" formControlName="email">
         <label>
-        <span style="transition-delay:0ms">UserName</span>
+        <span style="transition-delay:0ms">Email</span>
         </label>
         <!-- Email Validation Error Messages -->
         <div *ngIf="submitted && formControl['email'].errors" class="text-danger">
-            <div *ngIf="formControl['email'].errors['email']">UserName must be valid.</div>
-            <div *ngIf="formControl['email'].errors['required']">UserName is required.</div>
+            <div *ngIf="formControl['email'].errors['email']">Email must be valid.</div>
+            <div *ngIf="formControl['email'].errors['required']">Email is required.</div>
           </div>
       </div>
       <!-- Password Input -->
