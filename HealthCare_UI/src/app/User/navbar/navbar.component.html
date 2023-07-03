@@ -2,6 +2,7 @@
     <div class="nav-wrapper">
      <div class="grad-bar"></div>
      <nav class="navbar">
+      <!-- Company Logo -->
        <img src="../../../assets/spark_logo.png" alt="Company Logo">
        <div class="menu-toggle" id="mobile-menu">
          <span class="bar"></span>
@@ -9,22 +10,26 @@
          <span class="bar"></span>
        </div>
        <ul class="nav no-search">
-         <li class="nav-item"><a [routerLink]="['/home']">Home</a></li>
+        <!-- Navigation Links -->
+         <li class="nav-item"><a [routerLink]="['']">LaunchPad</a></li>
+         <!-- <li class="nav-item"><a href="https://mediafiles.botpress.cloud/01102c0f-1be8-4031-8e5d-eab9c2687320/webchat/bot.html" target="_blank">Chat Buddy</a></li> -->
          <li class="nav-item"><a [routerLink]="['/special']">Specialities</a></li>
-         <li class="nav-item"><a href="#">Doctors</a></li>
-         <li class="nav-item"><a href="#">Appointment  &nbsp;</a></li>
-         <li class="nav-item"><a [routerLink]="['/login']" id="login">LogIn</a></li>
-         <li class="nav-item"><a href="#" id="logout">LogOut</a></li>
+        
+         <li class="nav-item"><a [routerLink]="['/appoint']">Appointment  &nbsp;</a></li>
+         <li class="nav-item"><a [routerLink]="['/login']"  *ngIf="!isLoggedIn" id="login">LogIn</a></li>
+         <li class="nav-item"><a [routerLink]="['']" *ngIf="isLoggedIn" (click)="logout()" id="logout">LogOut</a></li>
        </ul>
      </nav>
      </div>
      <section class="headline">
+    <!-- Headline -->
        <h1 class="animate__animated animate__jackInTheBox" id="headline">SPARK HEALTHCARE</h1>
        <p id="subline">Experience The Health Caring Moments !</p>
      </section>
      <br>
      <h1 class="animate__animated animate__fadeInUp" id="head">Experience World-class HealthCare at Spark HealthCare </h1>
      <section class="features">
+    <!-- Feature Containers -->
        <div class="feature-container">
          <img src="https://advantagecaredtc.org/wp-content/uploads/2019/01/medical-check-up0TH.jpg" alt="Flexbox Feature">
          <h2 class="card-title">Spark Basic HealthCheck</h2>
@@ -36,15 +41,9 @@
          <p>This master health package contains tests that are often a common requirement of most corporates as a stamp of an employee’s fitness.</p>
        </div>
        <div class="feature-container">
-         <img src=" https://www.indushealthplus.com/media/article_img/comprehensive-health-checkups-thumb.jpg ">
+      <img src="https://www.indushealthplus.com/media/article_img/comprehensive-health-checkups-thumb.jpg" alt="Flexbox Feature">
          <h2 class="card-title">Spark Executive HealthCheck</h2>
          <p>A more detailed plan, this executive health plus package can help us additionally check for any deficiencies that might lead to serious complications.</p>
        </div>
      </section>
    </div>
-  
-  
-   
-  
-   
-  

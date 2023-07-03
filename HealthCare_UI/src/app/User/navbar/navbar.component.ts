@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AuthService } from '../../Service/auth.service'; // Import your authentication service
 declare var $: any; // Import jQuery or use an appropriate TypeScript declaration for it
 
 @Component({
@@ -8,10 +8,18 @@ declare var $: any; // Import jQuery or use an appropriate TypeScript declaratio
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
-  login:boolean= false;
-  constructor() { }
-
+  isLoggedIn: boolean = false;
+ 
+  constructor(private authservice:AuthService) {
+      // Subscribe to the authentication service's login status
+    this.authservice.isLoggedIn.subscribe((loggedIn: boolean) => {
+      this.isLoggedIn = loggedIn;
+    });
+   }
+   logout() {
+    // Call the authentication service's logout method
+    this.authservice.logout();
+  }
   ngOnInit() {
     $("#search-icon").click(() => {
       $(".nav").toggleClass("search");

@@ -140,3 +140,14 @@
    
    
 }
+.vdo{
+  display: flex;
+  padding-left: 25px;
+  padding-right: 10px;
+  margin-left: 180px;
+  margin-right: 200px;
+}
+#iframe2{
+  padding-left: 20px;
+  padding-right: 20px;
+}

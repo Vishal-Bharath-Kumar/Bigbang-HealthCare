@@ -10,6 +10,10 @@ import { NavbarComponent } from './User/navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { SpecialitiesComponent } from './User/specialities/specialities.component';
 import { SpecialComponent } from './User/special/special.component';
+import { AppointmentComponent } from './User/appointment/appointment.component';
+import { RegisterComponent } from './register/register.component';
+
+
 
 @NgModule({
     declarations: [
@@ -18,7 +22,11 @@ import { SpecialComponent } from './User/special/special.component';
         NavbarComponent,
         FooterComponent,
         SpecialitiesComponent,
-        SpecialComponent
+        SpecialComponent,
+        AppointmentComponent,
+        RegisterComponent
+    
+
     ],
     providers: [],
     bootstrap: [AppComponent],

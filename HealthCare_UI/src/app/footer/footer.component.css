@@ -17,6 +17,7 @@ footer{
 }
 .text-uppercase{
     margin-top: 15px;
+   
 }
 .text-dark{
     font-size: large;
@@ -25,6 +26,7 @@ footer{
 address{
     font-size: large;
     padding-bottom: 40px;
+    padding-top: 10px;
 }
 h5{
     font-size: x-large;
@@ -107,4 +109,11 @@ h5{
     100% {
       transform: scale(1);
     }
+  }
+  .address{
+    text-decoration: none;
+    color:black;
+    font-family: 'Helvetica';
+    font-size: large;
+    font-weight: 400;
   }
