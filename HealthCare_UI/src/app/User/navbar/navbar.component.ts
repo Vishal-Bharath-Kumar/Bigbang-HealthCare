@@ -9,12 +9,17 @@ declare var $: any; // Import jQuery or use an appropriate TypeScript declaratio
 })
 export class NavbarComponent implements OnInit {
   isLoggedIn: boolean = false;
+logged=localStorage.getItem("token");
  
   constructor(private authservice:AuthService) {
       // Subscribe to the authentication service's login status
     this.authservice.isLoggedIn.subscribe((loggedIn: boolean) => {
       this.isLoggedIn = loggedIn;
     });
+
+    if(this.logged!=null){
+      this.isLoggedIn=true;
+    }
    }
    logout() {
     // Call the authentication service's logout method

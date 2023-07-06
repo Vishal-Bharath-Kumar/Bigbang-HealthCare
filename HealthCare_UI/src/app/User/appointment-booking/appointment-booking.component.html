@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <h1>Book Appointment</h1>
+
+  <div class="row">
+    <div class=" card card-inverse  w-25 m-2" *ngFor="let c of DoctorRegister">
+      <img src={{c.image}} class="card-img-top" alt="Image Description" height="150rem">
+      <h3 class="card-title border-bottom font-monospace">{{c.id}}</h3>
+      <h4 class="card-title border-bottom font-monospace">{{c.specialization}}</h4>
+      
+      <div id="buttons">
+        <button
+          class="btn btn-danger"
+          data-toggle="modal"
+          data-target="#updateModal"
+          (click)="bookAppointment(c)"
+        >
+          Book Appointment
+        </button>
+    </div>
+     
+
+    
+   
+ 
+</div>
+<app-appointment data="{{ selectedDoctorId }}"></app-appointment>

@@ -1,58 +1,51 @@
-<div class="login_form">
-    <img class="login_image" src="../../assets/Login.svg" alt="Login Logo" height="700px" width="700px">
-    <!-- Login Form -->
-    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
-      <!-- Login Title -->
-      <h1 class="animate__animated animate__backInDown">
-        <span class="title-word title-word-1">L</span>
-        <span class="title-word title-word-2">O</span>
-        <span class="title-word title-word-3">G</span>
-        <span class="title-word title-word-4">I</span>
-        <span class="title-word title-word-5">N</span>
-      </h1>
-      <br>
-      <br>
-      <br>
-      <br>
-      <!-- Email Input -->
-      <div class="form-control">
-      <input type="email" required id="inputEmail" formControlName="email">
-        <label>
-        <span style="transition-delay:0ms">Email</span>
-        </label>
-        <!-- Email Validation Error Messages -->
-        <div *ngIf="submitted && formControl['email'].errors" class="text-danger">
-            <div *ngIf="formControl['email'].errors['email']">Email must be valid.</div>
-            <div *ngIf="formControl['email'].errors['required']">Email is required.</div>
+
+         
+         <div class="login_form">
+          <img class="login_image" src="../../assets/Login.svg" alt="Login Logo" height="700px" width="700px">
+          <!-- Login Form -->
+          <form >
+            <!-- Login Title -->
+            <h1 class="animate__animated animate__backInDown">
+              <span class="title-word title-word-1">L</span>
+              <span class="title-word title-word-2">O</span>
+              <span class="title-word title-word-3">G</span>
+              <span class="title-word title-word-4">I</span>
+              <span class="title-word title-word-5">N</span>
+            </h1>
+            <br>
+            <br>
+            <br>
+            <br>
+            <!-- Email Input -->
+            <div class="form-control">
+              <input type="text" id="inputEmail"  [(ngModel)]="userDTO.email" name="email" required pattern="[a-zA-Z0-9]*" #username="ngModel"/>
+              <label>
+                <span style="transition-delay:0ms">Email</span>
+                </label>
+                    <div *ngIf="username.invalid && (username.dirty || username.touched)" class="text-danger">
+                      <div *ngIf="username.errors?.['required']">Email is required.</div>
+                      
+            </div>
+            <!-- Password Input -->
+            <div class="form-control1">
+              <input type="password" id="inputPassword"  [(ngModel)]="userDTO.password" name="password" required #password="ngModel"/>
+              <label>
+                <span style="transition-delay:0ms">Password</span>
+              </label> 
+                  <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+                      <div *ngIf="password.errors?.['required']">Password is required. </div>
+                      
+                  </div>
+            </div>
           </div>
-      </div>
-      <!-- Password Input -->
-      <div class="form-control1">
-        <input type="password" required id="inputPassword" formControlName="password">
-        <label>
-        <span style="transition-delay:0ms">Password</span>
-        </label>
-        <!-- Password Validation Error Messages -->
-        <div *ngIf="submitted && formControl['password'].errors" class="text-danger">
-          <div *ngIf="formControl['password'].errors['required']">Password is required.</div>
-          <div *ngIf="formControl['password'].errors['pattern']">
-            <ul>
-              <li>Password should be alphanumeric.</li>
-              <li>A letter of the password should be capital.</li>
-              <li>Password must contain a special character (@, $, !, &, etc).</li>
-              <li>Password length must be greater than 7 characters.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <br>
-      <br>
-      <!-- Login Button -->
-      <button class="ui-btn" id="button" type="submit">
-      <span>Login</span>
-      </button>
-      <br>
-      <br>
-      <p id="noaccount">Don't have an account? &nbsp;<a id="register" [routerLink]="['/register']">Register Now!</a></p>
-    </form>
-  </div>
+            <br>
+            <br>
+            <!-- Login Button -->
+            <button class="ui-btn" id="button" type="button" (click)="login()">
+            <span>Login</span>
+            </button>
+            <br>
+            <br>
+            <p id="noaccount">Don't have an account? &nbsp;<a id="register" (click)="move()">Register Now!</a></p>
+          </form>
+        </div>         

@@ -12,10 +12,11 @@
        <ul class="nav no-search">
         <!-- Navigation Links -->
          <li class="nav-item"><a [routerLink]="['']">LaunchPad</a></li>
-         <!-- <li class="nav-item"><a href="https://mediafiles.botpress.cloud/01102c0f-1be8-4031-8e5d-eab9c2687320/webchat/bot.html" target="_blank">Chat Buddy</a></li> -->
          <li class="nav-item"><a [routerLink]="['/special']">Specialities</a></li>
+         
         
-         <li class="nav-item"><a [routerLink]="['/appoint']">Appointment  &nbsp;</a></li>
+
+        <li class="nav-item"><a [routerLink]="['/appoint']">Appointment  &nbsp;</a></li>
          <li class="nav-item"><a [routerLink]="['/login']"  *ngIf="!isLoggedIn" id="login">LogIn</a></li>
          <li class="nav-item"><a [routerLink]="['']" *ngIf="isLoggedIn" (click)="logout()" id="logout">LogOut</a></li>
        </ul>

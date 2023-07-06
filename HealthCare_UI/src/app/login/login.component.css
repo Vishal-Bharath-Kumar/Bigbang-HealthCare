@@ -59,10 +59,16 @@
     100%  {color: var(--color-1)}
   }
   
-  .form-control1,
+ 
   .form-control {
     position: relative;
-    margin: 40px 260px 40px;
+    margin: 40px 250px 40px;
+    width: 190px;
+    border: none;
+  }
+  .form-control1{
+    position: relative;
+    margin: 40px 0px 40px;
     width: 190px;
   }
   
@@ -128,6 +134,7 @@
     --default-btn-color: #fff;
     border-radius: 5px;
     margin-left: 300px;
+    margin-top: 0;
     --font-size: 16px;
     --font-weight: 600;
     --font-family: Menlo, Roboto Mono, monospace;
@@ -189,6 +196,7 @@
     cursor: pointer;
     text-decoration: none;
   }
+
   
   @keyframes chitchat {
     0% {

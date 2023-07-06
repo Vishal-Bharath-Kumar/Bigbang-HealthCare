@@ -1,0 +1,23 @@
+<app-adminhome></app-adminhome>
+<table class="table ">
+    <thead>
+        <tr>
+            <th scope="col">User Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Accept</th>
+            <th scope="col">Denied</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let req of requests">
+            <td>{{req.id}}</td>
+            <td>{{req.email}}</td>
+
+            <td><button class="btn btn-success" (click)="handlechangeStatus(req.id)">Accept</button></td>
+            <td><button class="btn btn-danger" (click)="handleDelete(req.id)">Denied</button></td>
+
+         </tr>
+    </tbody>
+</table> 
+
