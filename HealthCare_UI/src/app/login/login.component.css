@@ -1,0 +1,339 @@
+.login_form {
+    display: flex;
+    margin-left: 40px;
+  }
+  
+  .login_image {
+    margin-top: 80px;
+  }
+  
+  .animate__animated {
+    font-weight: 800;
+    font-size: 6.5vw;
+    text-transform: uppercase;
+    margin-top: 180px;
+    margin-left: 200px;
+  }
+  
+  .title-word {
+    animation: color-animation 4s linear infinite;
+  }
+  
+  .title-word-1 {
+    --color-1: #DF8453;
+    --color-2: #3D8DAE;
+    --color-3: #E4A9A8;
+  }
+  
+  .title-word-2 {
+    --color-1: #DBAD4A;
+    --color-2: #ACCFCB;
+    --color-3: #408f95;
+  }
+  
+  .title-word-3 {
+    --color-1: #ACCFCB;
+    --color-2: #E4A9A8;
+    --color-3: #ACCFCB;
+  }
+  
+  .title-word-4 {
+    --color-1: #3D8DAE;
+    --color-2: #DF8453;
+    --color-3: #E4A9A8;
+  }
+  
+  .title-word-5 {
+    --color-1: #DBAD4A;
+    --color-2: #ACCFCB;
+    --color-3: #3f7a7e;
+  }
+  
+  @keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+  }
+  
+ 
+  .form-control {
+    position: relative;
+    margin: 40px 250px 40px;
+    width: 190px;
+    border: none;
+  }
+  .form-control1{
+    position: relative;
+    margin: 40px 0px 40px;
+    width: 190px;
+  }
+  
+  .form-control1 input,
+  .form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #4c4c4c solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #000000;
+  }
+  
+  .form-control1 input:focus,
+  .form-control input:focus,
+  .form-control1 input:valid,
+  .form-control input:valid {
+    outline: 0;
+    border-bottom-color: rgb(71, 71, 71);
+  }
+  .form-control1 label,
+  .form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  .form-control1 label span,
+  .form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    color: #00000000;
+    transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .form-control1 input:focus+label span,
+  .form-control input:focus+label span,
+  .form-control1 input:valid+label span,
+  .form-control input:valid+label span {
+    color: rgb(46, 145, 211);
+    transform: translateY(-30px); 
+  }
+   li{
+    text-align: justify;
+    list-style-type: none;
+    width: 280px;
+    margin-left: -40px;
+  }
+  .ui-btn {
+    --btn-default-bg: rgb(46, 145, 211);
+    --btn-padding: 15px 20px;
+    --btn-hover-bg: rgb(255, 255, 255);
+    --btn-transition: 0.3s;
+    --btn-letter-spacing: 0.1rem;
+    --btn-animation-duration: 1.2s;
+    --btn-shadow-color: rgba(69, 69, 69, 0.137);
+    --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+    --hover-btn-color: rgb(46, 145, 211);
+    --default-btn-color: #fff;
+    border-radius: 5px;
+    margin-left: 300px;
+    margin-top: 0;
+    --font-size: 16px;
+    --font-weight: 600;
+    --font-family: Menlo, Roboto Mono, monospace;
+  }
+  
+  .ui-btn {
+    box-sizing: border-box;
+    padding: var(--btn-padding);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--default-btn-color);
+    font: var(--font-weight) var(--font-size) var(--font-family);
+    background: var(--btn-default-bg);
+    border: none;
+    cursor: pointer;
+    transition: var(--btn-transition);
+    overflow: hidden;
+    box-shadow: var(--btn-shadow);
+  }
+  
+  .ui-btn span {
+    letter-spacing: var(--btn-letter-spacing);
+    transition: var(--btn-transition);
+    box-sizing: border-box;
+    position: relative;
+    background: inherit;
+  }
+  
+  .ui-btn span::before {
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    background: inherit;
+  }
+  
+  .ui-btn:hover,
+  .ui-btn:focus {
+    background: var(--btn-hover-bg);
+  }
+  
+  .ui-btn:hover span,
+  .ui-btn:focus span {
+    color: var(--hover-btn-color);
+  }
+  
+  .ui-btn:hover span::before,
+  .ui-btn:focus span::before {
+    animation: chitchat linear both var(--btn-animation-duration);
+  }
+  #noaccount{
+    font-size: larger;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 190px;
+  }
+  #register{
+    color: #3D8DAE;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  
+  @keyframes chitchat {
+    0% {
+      content: "#";
+    }
+    5% {
+      content: ".";
+    }
+    10% {
+      content: "^{";
+    }
+    15% {
+      content: "-!";
+    }
+    20% {
+      content: "#$_";
+    }
+    25% {
+      content: "№:0";
+    }
+    30% {
+      content: "#{+.";
+    }
+    35% {
+      content: "@}-?";
+    }
+    40% {
+      content: "?{4@%";
+    }
+    45% {
+      content: "=.,^!";
+    }
+    50% {
+      content: "?2@%";
+    }
+    55% {
+      content: "\;1}]";
+    }
+    60% {
+      content: "?{%:%";
+      right: 0;
+    }
+     65% {
+      content: "|{f[4";
+      right: 0;
+    }
+     70% {
+      content: "{4%0%";
+      right: 0;
+    }
+     75% {
+      content: "'1_0<";
+      right: 0;
+    }
+     80% {
+      content: "{0%";
+      right: 0;
+    }
+     85% {
+      content: "]>'";
+      right: 0;
+    }
+     90% {
+      content: "4";
+      right: 0;
+    }
+     95% {
+      content: "2";
+      right: 0;
+    }
+     100% {
+      content: "";
+      right: 0;
+    }
+  }
+  
+  
+  .text-danger{
+    color: red;
+  }
+  
+    
+  @media only screen and (max-width: 1074px) {
+    body {
+      background-color: #accfcb22;
+    }
+  
+    .login_form {
+      display: block;
+    }
+  
+    .login_image {
+      height: 24px;
+      width: 24px;
+      position: relative;
+      filter: opacity(0);
+    }
+  
+    form {
+      margin-left: -120px;
+    }
+  }
+  @media only screen and (max-width: 820px) {
+    body {
+      background-color: #accfcb22;
+    }
+  
+    .login_form {
+      display: block;
+    }
+  
+    .login_image {
+      position: relative;
+      filter: opacity(0);
+    }
+  
+    form {
+      margin-left: -120px;
+    }
+  }
+  
+  /* Full Responsive View */
+  @media only screen and (max-width: 480px) {
+    body {
+      background-color: #accfcb55;
+    }
+    .login_form {
+      margin-left: 0;
+    }
+  
+    .login_image {
+      height: 16px;
+      width: 16px;
+    }
+  
+    form {
+      margin-left: 0;
+    }
+  }
+  
